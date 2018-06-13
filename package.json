@@ -7,6 +7,7 @@
     "test:watch": "mocha $(find src -name '*.spec.js') --recursive --require babel-core/register --watch",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "prepublish": "npm run test",
+    "prebuild": "rm -rf dist",
     "build": "rollup -c"
   },
   "engines": {

@@ -17,7 +17,7 @@ export default {
   external,
   output: [
     {
-      file: './dist/redux-automap.js',
+      file: './dist/env-autoload.js',
       format: 'cjs',
       sourceMap: true
     }
