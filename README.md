@@ -9,21 +9,19 @@
 
 ## Why?
 Because who wants bootstrap files in their boilerplate/templates?
+This is really just a code-smell implementation fix for using the
+wonderful [dotenv](https://www.npmjs.com/package/dotenv) library.
 
-## Loading .env file Without env-autoload
+## Usage
 
 #### .env
 ```bash
-KEY='Foo Bar Baz'
-PORT=1000
-```
-
-#### env.js
-```js
-
+TEST='foo bar baz'
 ```
 
 #### index.js (server)
 ```js
+import env from 'env-autoload'; // require('env-autoload'); works fine too
 
+process.env.TEST === 'foo bar baz'; // true
 ```
