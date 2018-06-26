@@ -4,10 +4,18 @@ function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'defau
 
 var dotenv = _interopDefault(require('dotenv'));
 
-if (process.env.NODE_ENV !== 'production') {
-  var result = dotenv.config({ silent: false });
+var Reset = '\x1b[0m';
+var Bright = '\x1b[1m';
+var FgYellow = '\x1b[33m';
 
-  if (result.error) {
-    throw result.error;
+if (process.env.NODE_ENV !== 'production') {
+  try {
+    var result = dotenv.config({ silent: false });
+
+    if (result.error) {
+      throw ReferenceError('no .env file found at project root');
+    }
+  } catch (err) {
+    console.log('' + Bright + FgYellow + '[env-loader] ' + Reset + FgYellow + err + Reset);
   }
 }
