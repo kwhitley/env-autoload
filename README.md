@@ -21,7 +21,7 @@ TEST='foo bar baz'
 
 #### index.js (server)
 ```js
-import env from 'env-autoload'; // require('env-autoload'); works fine too
+import env from 'env-autoload'     // require('env-autoload') works fine too
 
-process.env.TEST === 'foo bar baz'; // true
+process.env.TEST === 'foo bar baz' // true
 ```
