@@ -26,3 +26,5 @@ if (process.env.NODE_ENV !== 'production') {
     console.log(`${Bright}${FgYellow}[env-loader] ${Reset}${FgYellow}${err}${Reset}`)
   }
 }
+
+export default process.env

@@ -19,3 +19,7 @@ if (process.env.NODE_ENV !== 'production') {
     console.log('' + Bright + FgYellow + '[env-loader] ' + Reset + FgYellow + err + Reset);
   }
 }
+
+var envAutoload = process.env;
+
+module.exports = envAutoload;

@@ -24,4 +24,8 @@ TEST='foo bar baz'
 import env from 'env-autoload'     // require('env-autoload') works fine too
 
 process.env.TEST === 'foo bar baz' // true
+env.TEST === 'foo bar baz'         // also true (convenience export)
 ```
+
+## Changelog
+- 1.1.0 - added process.env as convenience export (as well as to pass linting tests)
